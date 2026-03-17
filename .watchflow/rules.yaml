@@ -1,0 +1,50 @@
+rules:
+  - description: "PRs must reference a linked issue in the description or title (e.g. Fixes #123)."
+    enabled: true
+    severity: "high"
+    event_types: ["pull_request"]
+    parameters:
+      require_linked_issue: true
+
+  - description: "When a PR modifies paths with CODEOWNERS, those owners must be added as reviewers."
+    enabled: true
+    severity: "high"
+    event_types: ["pull_request"]
+    parameters:
+      require_code_owner_reviewers: true
+
+  - description: "PR total lines changed must not exceed a maximum (e.g. 500 lines)."
+    enabled: true
+    severity: "medium"
+    event_types: ["pull_request"]
+    parameters:
+      max_pr_loc: 500
+
+  - description: "PR titles must follow a pattern (e.g. feat:, fix:, docs:) and descriptions must align diff."
+    enabled: true
+    severity: "medium"
+    event_types: ["pull_request"]
+    parameters:
+      title_pattern: "^feat|^fix|^docs|^style|^refactor|^test|^chore|^perf|^ci|^build|^revert"
+      min_description_length: 50
+
+  - description: "Source code changes must include a CHANGELOG or .changeset update."
+    enabled: true
+    severity: "medium"
+    event_types: ["pull_request"]
+    parameters:
+      require_changelog_update: true
+
+  - description: "All review comment threads must be resolved before merge."
+    enabled: true
+    severity: "high"
+    event_types: ["pull_request"]
+    parameters:
+      block_on_unresolved_comments: true
+
+  - description: "PR description must accurately reflect the actual code changes in the diff."
+    enabled: true
+    severity: "medium"
+    event_types: ["pull_request"]
+    parameters:
+      require_description_diff_alignment: true
