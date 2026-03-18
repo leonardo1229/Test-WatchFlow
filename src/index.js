@@ -29,6 +29,7 @@ app.post('/users', (req, res) => {
   res.status(201).json({ id: 3, name, email });
 });
 
+
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
