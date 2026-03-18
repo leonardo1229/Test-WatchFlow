@@ -13,6 +13,7 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok' });
 });
 
+
 app.get('/users', (req, res) => {
   const users = [
     { id: 1, name: 'Alice', email: 'alice@example.com' },
