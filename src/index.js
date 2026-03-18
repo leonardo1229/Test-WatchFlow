@@ -9,7 +9,6 @@ app.get('/', (req, res) => {
   res.json({ message: 'test-watchflow API is running' });
 });
 
-
 app.get('/health', (req, res) => {
   res.json({ status: 'ok' });
 });
