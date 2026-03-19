@@ -22,6 +22,7 @@ app.get('/users', (req, res) => {
   res.json(users);
 });
 
+
 app.post('/users', (req, res) => {
   const { name, email } = req.body;
   if (!name || !email) {
