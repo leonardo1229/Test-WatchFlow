@@ -37,13 +37,6 @@ This repository is used to validate the **Watchflow** `/risk` and `/reviewers` s
 
 ---
 
-## One-time Setup
-
-1. **Install Watchflow GitHub App** on this repo.
-2. **Set CODEOWNERS**: open `.github/CODEOWNERS` and replace placeholder usernames with your actual GitHub accounts. Add a second collaborator for load-balancing tests.
-3. **Watchflow must be running** (or deployed) and connected to this repo via webhook.
-4. All slash commands (`/risk`, `/reviewers`) are posted as PR comments.
-
 ---
 
 ## Test Cases
