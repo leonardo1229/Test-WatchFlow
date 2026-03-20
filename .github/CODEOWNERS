@@ -1,0 +1,24 @@
+# CODEOWNERS — used by Watchflow to drive reviewer recommendations
+#
+# FORMAT: <path-pattern>   @<github-username>
+#
+# SETUP: Replace @leonardo1229 with your real GitHub username(s).
+#        To test TEAM slugs, add @your-org/your-team (TC-13).
+#        Add a second collaborator account (e.g. @reviewer2) for load-balancing tests (TC-20, TC-21).
+
+# === Catch-all: default owner for everything ===
+*                           @leonardo1229
+
+# === CRITICAL paths — triggers critical risk + senior reviewer requirement ===
+src/billing/                @leonardo1229
+src/auth/                   @leonardo1229
+
+# === HIGH paths — config and production settings ===
+src/config/                 @leonardo1229
+config/                     @leonardo1229
+
+# === MEDIUM paths — general source ownership ===
+src/                        @leonardo1229
+
+# === TEAM ownership example (uncomment and replace to test TC-13) ===
+# src/billing/              @your-org/billing-team

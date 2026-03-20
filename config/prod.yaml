@@ -1,0 +1,28 @@
+# config/prod.yaml
+# HIGH PATH: Changes here require senior review (Watchflow rule: severity high)
+# This file represents production configuration — any change is high-risk.
+
+server:
+  port: 3000
+  host: "0.0.0.0"
+  timeout: 30s
+
+database:
+  host: "${DB_HOST}"
+  port: 5432
+  name: "${DB_NAME}"
+  pool:
+    min: 5
+    max: 20
+
+auth:
+  jwt_expiry: 3600
+  refresh_expiry: 86400
+
+rate_limit:
+  window_ms: 60000
+  max_requests: 100
+
+logging:
+  level: "info"
+  format: "json"
