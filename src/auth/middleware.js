@@ -19,6 +19,7 @@ function authenticate(req, res, next) {
   next();
 }
 
+
 /**
  * authorize — simple role-based access control.
  */
