@@ -1,6 +1,6 @@
 # Test-WatchFlow — Reviewer Recommendation Feature Test Guide
 
-This repository is used to validate the **Watchflow Reviewer Recommendation** feature against the CTO ticket requirements.
+This repository is used to validate the **Watchflow Reviewer Recommendation** feature against the new feature ticket requirements.
 
 ---
 
