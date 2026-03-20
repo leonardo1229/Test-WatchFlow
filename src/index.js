@@ -9,7 +9,6 @@ app.get('/', (req, res) => {
   res.json({ message: 'test-watchflow API is running' });
 });
 
-
 app.get('/health', (req, res) => {
   res.json({ status: 'ok' });
 });
@@ -33,3 +32,5 @@ app.post('/users', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+
+
