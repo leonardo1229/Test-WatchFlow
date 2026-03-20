@@ -1,6 +1,6 @@
 # Test-WatchFlow — Reviewer Recommendation Feature Test Guide
 
-This repository is used to validate the **Watchflow Reviewer Recommendation** feature against the new feature ticket requirements.
+<!-- This repository is used to validate the **Watchflow Reviewer Recommendation** feature against the new feature ticket requirements. -->
 
 ---
 
@@ -47,7 +47,7 @@ test-watchflow/
 
 **Risk thresholds:** Low ≤ 3 | Medium 4–6 | High 7–10 | Critical 10+
 
----
+<!-- ---
 
 ## One-time Setup
 
@@ -56,7 +56,7 @@ test-watchflow/
 3. **Watchflow must be running** (or deployed) and connected to this repo via webhook.
 4. All slash commands (`/risk`, `/reviewers`) are posted as PR comments.
 
----
+--- -->
 
 ## All Test Cases
 
