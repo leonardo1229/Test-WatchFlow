@@ -1,24 +1,4 @@
 rules:
-  # ─── CRITICAL severity rules ─────────────────────────────────────────────────
-  # These contribute 5 pts each to risk score → easiest way to hit critical risk.
-
-  - description: "Changes to billing module (src/billing/) require senior reviewer with billing domain expertise."
-    enabled: true
-    severity: "critical"
-    event_types: ["pull_request"]
-    parameters:
-      file_pattern: "src/billing/**"
-
-  - description: "Changes to auth module (src/auth/) require a dedicated security review."
-    enabled: true
-    severity: "critical"
-    event_types: ["pull_request"]
-    parameters:
-      file_pattern: "src/auth/**"
-
-  # ─── HIGH severity rules ──────────────────────────────────────────────────────
-  # These contribute 3 pts each to risk score.
-
   - description: "PRs must reference a linked issue in the description or title (e.g. Fixes #123)."
     enabled: true
     severity: "high"
@@ -32,23 +12,6 @@ rules:
     event_types: ["pull_request"]
     parameters:
       require_code_owner_reviewers: true
-
-  - description: "Changes to production config files (config/) require config owner review."
-    enabled: true
-    severity: "high"
-    event_types: ["pull_request"]
-    parameters:
-      file_pattern: "config/**"
-
-  - description: "All review comment threads must be resolved before merge."
-    enabled: true
-    severity: "high"
-    event_types: ["pull_request"]
-    parameters:
-      block_on_unresolved_comments: true
-
-  # ─── MEDIUM severity rules ────────────────────────────────────────────────────
-  # These contribute 2 pts each to risk score.
 
   - description: "PR total lines changed must not exceed a maximum (e.g. 500 lines)."
     enabled: true
@@ -71,6 +34,13 @@ rules:
     event_types: ["pull_request"]
     parameters:
       require_changelog_update: true
+
+  - description: "All review comment threads must be resolved before merge."
+    enabled: true
+    severity: "high"
+    event_types: ["pull_request"]
+    parameters:
+      block_on_unresolved_comments: true
 
   - description: "PR description must accurately reflect the actual code changes in the diff."
     enabled: true
