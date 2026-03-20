@@ -21,13 +21,15 @@ function authenticate(req, res, next) {
 
 /**
  * authorize — simple role-based access control.
+ * Supports array of roles for multi-role checks.
  */
 function authorize(role) {
+  const allowed = Array.isArray(role) ? role : [role];
   return (req, res, next) => {
     if (!req.user) {
       return res.status(401).json({ error: 'Not authenticated' });
     }
-    if (req.user.role !== role) {
+    if (!allowed.includes(req.user.role)) {
       return res.status(403).json({ error: 'Insufficient permissions' });
     }
     next();

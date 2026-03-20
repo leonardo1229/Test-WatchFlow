@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Changed
+- `src/auth/middleware.js`: `authorize()` now accepts an array of roles for multi-role access control (Fixes #9)
+
 ## [1.0.0] - 2026-03-20
 ### Added
 - Initial Express.js API with health, users endpoints
